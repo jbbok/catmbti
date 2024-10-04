@@ -42,7 +42,11 @@ const LogoImg = styled.div`
 
 const Desc = styled.div`
   margin: 10px 0;
+  padding: 8px 14px;
   font-size: 20px;
+  text-align: center;
+  background: orangered;
+  border-radius: 8px;
 `;
 
 const Result = () => {
@@ -74,7 +78,9 @@ const Result = () => {
           <br />
           🐾 {resultData.best}형 {resultData.name}입니다! 🐈
         </Desc>
-        <Button onClick={handleClickButton}>테스트 다시 시작하기</Button>
+        <Button variant="light" onClick={handleClickButton}>
+          테스트 다시 시작하기
+        </Button>
       </Contents>
     </Wrapper>
   );

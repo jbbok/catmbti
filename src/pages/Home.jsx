@@ -42,7 +42,11 @@ const LogoImg = styled.div`
 
 const Desc = styled.div`
   margin: 10px 0;
+  padding: 8px 14px;
   font-size: 20px;
+  text-align: center;
+  background: orangered;
+  border-radius: 8px;
 `;
 
 const Home = () => {
@@ -59,7 +63,9 @@ const Home = () => {
           <img className="rounded-circle" src="/cat/twocats.jpg" />
         </LogoImg>
         <Desc>MBTI를 기반으로 하는 나랑 잘 맞는 🐱고양이 찾기!</Desc>
-        <Button onClick={handleClickButton}>테스트 시작하기</Button>
+        <Button variant="light" onClick={handleClickButton}>
+          테스트 시작하기
+        </Button>
       </Contents>
     </Wrapper>
   );
