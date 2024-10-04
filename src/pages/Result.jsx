@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   height: 100vh;
-  color: #fff;
+  color: #2c2c2c;
 `;
 
 const Header = styled.div`

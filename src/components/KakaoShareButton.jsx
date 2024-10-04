@@ -36,7 +36,11 @@ const KakaoShareButton = ({ data }) => {
       ],
     });
   };
-  return <Button onClick={shareKakao}>카카오톡 공유하기</Button>;
+  return (
+    <Button variant="light" onClick={shareKakao}>
+      카카오톡 공유하기
+    </Button>
+  );
 };
 
 export default KakaoShareButton;
