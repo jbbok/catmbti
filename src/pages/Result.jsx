@@ -3,6 +3,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "react-bootstrap";
 import { ResultData } from "../assets/resultData";
+import KakaoShareButton from "../components/KakaoShareButton";
 
 const Wrapper = styled.div`
   display: flex;
@@ -49,6 +50,11 @@ const Desc = styled.div`
   border-radius: 8px;
 `;
 
+const ButtonGroup = styled.div`
+  display: flex;
+  gap: 10px;
+`;
+
 const Result = () => {
   const [resultData, setResultData] = useState({});
   const [searchParams] = useSearchParams();
@@ -57,7 +63,7 @@ const Result = () => {
   // console.log(mbti);
   const navigate = useNavigate();
   const handleClickButton = () => {
-    navigate("/home");
+    navigate("/");
   };
   useEffect(() => {
     const result = ResultData.find((s) => s.best === mbti);
@@ -78,9 +84,12 @@ const Result = () => {
           <br />
           🐾 {resultData.best}형 {resultData.name}입니다! 🐈
         </Desc>
-        <Button variant="light" onClick={handleClickButton}>
-          테스트 다시 시작하기
-        </Button>
+        <ButtonGroup>
+          <Button variant="light" onClick={handleClickButton}>
+            테스트 다시 시작하기
+          </Button>
+          <KakaoShareButton />
+        </ButtonGroup>
       </Contents>
     </Wrapper>
   );
