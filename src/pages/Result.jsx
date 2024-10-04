@@ -46,7 +46,7 @@ const Desc = styled.div`
   padding: 8px 14px;
   font-size: 20px;
   text-align: center;
-  background: orangered;
+  background: orange;
   border-radius: 8px;
 `;
 
